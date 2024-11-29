@@ -15,8 +15,9 @@ class CustomFooter extends StatelessWidget {
         children: [
           const CustomDot(),
           CustomButton(
-            text: '',
-            onPressed1: () {},
+            text: "Next",
+            onPressed: () {},
+            top: 20,
           ),
           GestureDetector(
             onTap: () {},

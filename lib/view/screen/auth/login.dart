@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/image_asset.dart';
-import '../../widget/auth/custom_textform.dart';
+import '../../widget/auth/custom_footer_auth.dart';
+import '../../widget/auth/custom_forget_remember.dart';
+import '../../widget/auth/custom_social.dart';
+import '../../widget/auth/custom_text_form.dart';
+import '../../widget/custom_button.dart';
 
 class LogIn extends StatelessWidget {
   const LogIn({super.key});
@@ -49,34 +53,86 @@ class LogIn extends StatelessWidget {
               ),
             ),
             Positioned.fill(
-              top: 270,
+              top: 222,
               child: Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.auth,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30),
-                    ),
+                decoration: BoxDecoration(
+                  color: AppColors.auth,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(30.0),
-                    child: Column(
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30.0, vertical: 15),
+                      child: Column(
+                        children: [
+                          CustomTextForm(
+                            label: "Email",
+                            isPhone: false,
+                            hintText: "example@gmail.com",
+                            obscuringCharacter: "*",
+                          ),
+                          SizedBox(
+                            height: 7,
+                          ),
+                          CustomTextForm(
+                            label: "Password",
+                            isPhone: false,
+                            hintText: "example@gmail.com",
+                            obscuringCharacter: "*",
+                          ),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          CustomForgetRemember(
+                            onTap: () {},
+                          ),
+                        ],
+                      ),
+                    ),
+                    CustomButton(
+                      text: "Log In",
+                      onPressed: () {},
+                      top: 8,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomFooterAuth(
+                      onTap: () {},
+                      text1: "Don’t have an account? ",
+                      text2: "Sign Up",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text("OR"),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomTextForm(
-                          label: "Email",
-                          isPhone: false,
-                          hintText: "example@gmail.com",
-                          obscuringCharacter: "*",
+                        CustomSocial(
+                          onTap: () {},
+                          imageUrl: AppImageAsset.facebook,
                         ),
-                        CustomTextForm(
-                          label: "Password",
-                          isPhone: false,
-                          hintText: "example@gmail.com",
-                          obscuringCharacter: "*",
+                        CustomSocial(
+                          onTap: () {},
+                          imageUrl: AppImageAsset.twitter,
+                        ),
+                        CustomSocial(
+                          onTap: () {},
+                          imageUrl: AppImageAsset.google,
                         ),
                       ],
                     ),
-                  )),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

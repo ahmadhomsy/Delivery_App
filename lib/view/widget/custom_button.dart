@@ -4,29 +4,31 @@ import '../../core/constant/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
-  final void Function() onPressed1;
+  final double top;
+  final void Function() onPressed;
   const CustomButton({
     super.key,
+    required this.top,
     required this.text,
-    required this.onPressed1,
+    required this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
+      height: 62,
       width: double.infinity,
-      margin: const EdgeInsets.only(
+      margin: EdgeInsets.only(
         left: 50,
         right: 50,
         bottom: 15,
-        top: 15,
+        top: top,
       ),
       child: MaterialButton(
-        onPressed: onPressed1,
+        onPressed: onPressed,
         color: AppColors.deepOrange,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Text(
           text,
