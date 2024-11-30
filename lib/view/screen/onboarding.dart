@@ -13,7 +13,7 @@ class OnBoarding extends StatelessWidget {
           children: [
             SizedBox(
               width: double.infinity,
-              height: 630,
+              height: 550,
               child: CustomSliderOnBoarding(),
             ),
             SizedBox(

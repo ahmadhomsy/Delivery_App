@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/constant/app_colors.dart';
+import '../../../core/constant/routes_page.dart';
 import '../custom_button.dart';
 import 'custom_dots.dart';
 
@@ -18,9 +19,12 @@ class CustomFooter extends StatelessWidget {
             text: "Next",
             onPressed: () {},
             top: 20,
+            bottom: 15,
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(AppRoutesPage.login);
+            },
             child: const Text(
               "Skip",
               style: TextStyle(

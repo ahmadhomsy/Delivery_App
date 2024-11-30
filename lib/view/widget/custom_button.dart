@@ -5,10 +5,12 @@ import '../../core/constant/app_colors.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final double top;
+  final double bottom;
   final void Function() onPressed;
   const CustomButton({
     super.key,
     required this.top,
+    required this.bottom,
     required this.text,
     required this.onPressed,
   });
@@ -21,7 +23,7 @@ class CustomButton extends StatelessWidget {
       margin: EdgeInsets.only(
         left: 50,
         right: 50,
-        bottom: 15,
+        bottom: bottom,
         top: top,
       ),
       child: MaterialButton(

@@ -15,7 +15,7 @@ class CustomSliderOnBoarding extends StatelessWidget {
         // },
         itemCount: onBoardingList.length,
         itemBuilder: (context, i) => Padding(
-          padding: const EdgeInsets.all(18.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               Image.asset(
@@ -25,11 +25,11 @@ class CustomSliderOnBoarding extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               Text(
                 onBoardingList[i].title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w800,
                 ),
@@ -43,7 +43,7 @@ class CustomSliderOnBoarding extends StatelessWidget {
                 child: Text(
                   onBoardingList[i].body,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontWeight: FontWeight.w400, fontSize: 16, height: 2),
                 ),
               ),
