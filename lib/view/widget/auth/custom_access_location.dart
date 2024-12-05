@@ -24,7 +24,7 @@ class CustomAccessLocation extends StatelessWidget {
           bottom: 30,
           text: "ACCESS LOCATION",
           onPressed: () {
-            Navigator.of(context).pushNamed(AppRoutesPage.homePage);
+            Navigator.of(context).pushReplacementNamed(AppRoutesPage.homePage);
           },
         ),
         const Padding(

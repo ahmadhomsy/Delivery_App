@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/routes.dart';
-import 'package:order_ready/view/screen/splash_screen.dart';
+import 'package:order_ready/view/screen/details_product.dart';
+import 'package:order_ready/view/screen/home_page.dart';
+import 'package:order_ready/view/screen/restaurant_view.dart';
+import 'package:order_ready/view/screen/result_search.dart';
+import 'package:order_ready/view/screen/search.dart';
+import 'package:order_ready/view/widget/filter/custom_filter_dialog.dart';
 import 'core/services/services.dart';
 
 void main() async {
@@ -16,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const ResultSearch(),
       routes: routes,
     );
   }

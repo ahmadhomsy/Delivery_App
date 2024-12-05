@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../core/constant/app_colors.dart';
+import '../../../core/constant/routes_page.dart';
+import '../../widget/auth/custom_back_button.dart';
 import '../../widget/auth/custom_header.dart';
 import '../../widget/auth/custom_verify.dart';
+import '../../widget/auth/custom_verify_rich_text.dart';
 import '../../widget/custom_button.dart';
 
 class Verification extends StatelessWidget {
@@ -19,6 +22,7 @@ class Verification extends StatelessWidget {
               title: "Verification",
               bodyText: "We have sent a code to your email",
             ),
+            const CustomBackButton(),
             Positioned.fill(
               top: 222,
               child: Container(
@@ -36,13 +40,9 @@ class Verification extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 30.0, vertical: 15),
                       child: Column(
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("data"),
-                              Text("data"),
-                              Text("data"),
-                            ],
+                          CustomVerifyRichText(),
+                          SizedBox(
+                            height: 10,
                           ),
                           CustomVerify(),
                         ],
@@ -50,7 +50,10 @@ class Verification extends StatelessWidget {
                     ),
                     CustomButton(
                       text: "VERIFY",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pushReplacementNamed(AppRoutesPage.resetPassword);
+                      },
                       top: 8,
                       bottom: 25,
                     ),

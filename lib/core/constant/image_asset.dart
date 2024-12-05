@@ -9,4 +9,5 @@ class AppImageAsset {
   static const String facebook = "$rootImage/Facebook_logo.png";
   static const String twitter = "$rootImage/twitter.jpg";
   static const String accessLocation = "$rootImage/access_location.png";
+  static const String logoRestaurant = "$rootImage/logo_restaurant.png";
 }

@@ -11,22 +11,32 @@ class CustomForgetRemember extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+      height: 20,
       width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            "Remember me",
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
-            ),
+          Row(
+            children: [
+              Checkbox(
+                value: false,
+                activeColor: Colors.green,
+                onChanged: (value) {},
+              ),
+              const Text(
+                "Remember me",
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
           ),
           InkWell(
             onTap: onTap,
             child: const Text(
-              "Forget Password",
+              "Forget Password ?",
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w400,

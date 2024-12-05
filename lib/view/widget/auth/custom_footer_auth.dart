@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/constant/app_colors.dart';
 
 class CustomFooterAuth extends StatelessWidget {

@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/routes_page.dart';
 import '../../../core/function/valid_input.dart';
-import '../../widget/auth/custom_body_login.dart';
-import '../../widget/auth/custom_footer_auth.dart';
-import '../../widget/auth/custom_forget_remember.dart';
+import '../../widget/auth/custom_back_button.dart';
 import '../../widget/auth/custom_header.dart';
-import '../../widget/auth/custom_or.dart';
-import '../../widget/auth/custom_row_social.dart';
 import '../../widget/auth/custom_text_form.dart';
 import '../../widget/custom_button.dart';
 
-class LogIn extends StatelessWidget {
-  const LogIn({super.key});
+class ResetPassword extends StatelessWidget {
+  const ResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
-    GlobalKey<FormState>? formState = GlobalKey<FormState>();
-
     return Scaffold(
       body: SingleChildScrollView(
         child: SizedBox(
@@ -26,9 +21,10 @@ class LogIn extends StatelessWidget {
           child: Stack(
             children: [
               const CustomHeader(
-                title: "Log In",
-                bodyText: "Please sign in to your existing account",
+                title: "Reset Password",
+                bodyText: "Please enter the new password",
               ),
+              const CustomBackButton(),
               Positioned.fill(
                 top: 222,
                 child: Container(
@@ -43,19 +39,22 @@ class LogIn extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 30.0, vertical: 15),
+                            horizontal: 30.0, vertical: 7),
                         child: Column(
                           children: [
                             CustomTextForm(
                               myValidator: (val) {
                                 val ??= "";
                                 return validInput(
-                                    val: val, min: 5, max: 50, type: "email");
+                                    val: val,
+                                    min: 5,
+                                    max: 30,
+                                    type: "password");
                               },
-                              obscure: false,
-                              label: "Email",
+                              label: "PASSWORD",
                               isPhone: false,
-                              hintText: "example@gmail.com",
+                              hintText: "enter your password",
+                              obscure: true,
                             ),
                             CustomTextForm(
                               myValidator: (val) {
@@ -66,45 +65,25 @@ class LogIn extends StatelessWidget {
                                     max: 30,
                                     type: "password");
                               },
-                              label: "Password",
+                              label: "Re-Type Password",
                               isPhone: false,
-                              hintText: "enter your password",
+                              hintText: "confirm password",
                               obscure: true,
-                            ),
-                            const SizedBox(
-                              height: 12,
-                            ),
-                            CustomForgetRemember(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed(AppRoutesPage.forgetPassword);
-                              },
                             ),
                           ],
                         ),
                       ),
                       CustomButton(
-                        text: "Log In",
+                        text: "Reset",
                         onPressed: () {
-                          if (formState.currentState!.validate()) {
-                            Navigator.of(context).pushNamedAndRemoveUntil(
-                              AppRoutesPage.accessLocation,
-                              (Route<dynamic> route) => false,
-                            );
-                          }
+                          Navigator.of(context).pushNamedAndRemoveUntil(
+                            AppRoutesPage.login,
+                            (Route<dynamic> route) => false,
+                          );
                         },
-                        top: 6,
-                        bottom: 25,
+                        top: 0,
+                        bottom: 10,
                       ),
-                      CustomFooterAuth(
-                        onTap: () {
-                          Navigator.of(context).pushNamed(AppRoutesPage.signUp);
-                        },
-                        text1: "Don’t have an account? ",
-                        text2: "Sign Up",
-                      ),
-                      const CustomOr(),
-                      const CustomRowSocial(),
                     ],
                   ),
                 ),

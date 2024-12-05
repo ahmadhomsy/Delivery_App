@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widget/onboarding_widget/custom_footer.dart';
-import '../widget/onboarding_widget/custom_slider.dart';
+import '../widget/onboarding/custom_footer.dart';
+import '../widget/onboarding/custom_slider.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});

@@ -10,7 +10,7 @@ class CustomVerify extends StatelessWidget {
       textDirection: TextDirection.ltr,
       child: OtpTextField(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        fieldWidth: 50,
+        fieldWidth: 55,
         borderRadius: BorderRadius.circular(10),
         numberOfFields: 4,
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/routes_page.dart';
+import '../../../core/function/valid_input.dart';
+import '../../widget/auth/custom_back_button.dart';
 import '../../widget/auth/custom_header.dart';
 import '../../widget/auth/custom_text_form.dart';
 import '../../widget/custom_button.dart';
@@ -21,6 +22,7 @@ class ForgetPassword extends StatelessWidget {
               title: "Forgot Password",
               bodyText: "Please sign in to your existing account",
             ),
+            const CustomBackButton(),
             Positioned.fill(
               top: 222,
               child: Container(
@@ -33,18 +35,23 @@ class ForgetPassword extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    const Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 30.0, vertical: 15),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30.0, vertical: 15),
                       child: Column(
                         children: [
                           CustomTextForm(
+                            myValidator: (val) {
+                              val ??= "";
+                              return validInput(
+                                  val: val, min: 5, max: 30, type: "email");
+                            },
                             label: "Email",
                             isPhone: false,
                             hintText: "example@gmail.com",
-                            obscuringCharacter: "*",
+                            obscure: false,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 7,
                           ),
                         ],
