@@ -38,7 +38,7 @@ class CustomFilterDialog extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 9),
 
               // Offers Section
               const Text(
@@ -49,10 +49,22 @@ class CustomFilterDialog extends StatelessWidget {
               const Wrap(
                 spacing: 8,
                 children: [
-                  CustomCheapFilter(label: 'Delivery'),
-                  CustomCheapFilter(label: 'Pick Up'),
-                  CustomCheapFilter(label: 'Offer'),
-                  CustomCheapFilter(label: 'Online payment available'),
+                  CustomCheapFilter(
+                    label: 'Delivery',
+                    isSelected: true,
+                  ),
+                  CustomCheapFilter(
+                    label: 'Pick Up',
+                    isSelected: false,
+                  ),
+                  CustomCheapFilter(
+                    label: 'Offer',
+                    isSelected: false,
+                  ),
+                  CustomCheapFilter(
+                    label: 'Online payment available',
+                    isSelected: false,
+                  ),
                 ],
               ),
               const SizedBox(height: 16),
@@ -66,9 +78,18 @@ class CustomFilterDialog extends StatelessWidget {
               const Wrap(
                 spacing: 8,
                 children: [
-                  CustomCheapFilter(label: '10-15 min'),
-                  CustomCheapFilter(label: '20 min'),
-                  CustomCheapFilter(label: '30 min'),
+                  CustomCheapFilter(
+                    label: '10-15 min',
+                    isSelected: false,
+                  ),
+                  CustomCheapFilter(
+                    label: '20 min',
+                    isSelected: true,
+                  ),
+                  CustomCheapFilter(
+                    label: '30 min',
+                    isSelected: false,
+                  ),
                 ],
               ),
               const SizedBox(height: 16),
@@ -79,15 +100,13 @@ class CustomFilterDialog extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
-              CustomRatingStars(),
+              const CustomRatingStars(),
               const SizedBox(height: 16),
-
-              // Filter Button
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange,
+                    backgroundColor: const Color(0xffff7622),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),

@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 
 class CustomCheapFilter extends StatelessWidget {
   final String label;
-  const CustomCheapFilter({super.key, required this.label});
+  final bool isSelected;
+  const CustomCheapFilter(
+      {super.key, required this.label, required this.isSelected});
 
   @override
   Widget build(BuildContext context) {
     return FilterChip(
       label: Text(label),
-      selected: false,
+      selected: isSelected,
       onSelected: (bool selected) {},
-      selectedColor: Colors.orange[100],
+      selectedColor: const Color(0xffff7622),
       backgroundColor: Colors.grey[200],
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
-import 'package:order_ready/view/screen/auth/Verification.dart';
+import 'package:order_ready/view/screen/auth/verification.dart';
 import 'package:order_ready/view/screen/auth/access_location.dart';
 import 'package:order_ready/view/screen/auth/forget_password.dart';
 import 'package:order_ready/view/screen/auth/login.dart';

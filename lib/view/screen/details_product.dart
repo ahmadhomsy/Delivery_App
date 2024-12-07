@@ -32,14 +32,32 @@ class DetailsProduct extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 16),
-              Container(
-                height: 200,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: const Icon(Icons.image, size: 100, color: Colors.white),
+              Stack(
+                children: [
+                  Container(
+                    height: 200,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors
+                          .grey[400], // Replace with the appropriate shade
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 8,
+                    right: 8,
+                    child: Container(
+                      height: 32,
+                      width: 32,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.8),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.favorite_border,
+                          size: 16, color: Colors.grey),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 8),
               Row(
@@ -127,27 +145,36 @@ class DetailsProduct extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "\$32",
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Row(
-                    children: [
-                      CustomCounterButton(
-                        icon: Icons.remove,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Text("2", style: TextStyle(fontSize: 16)),
-                      ),
-                      CustomCounterButton(icon: Icons.add),
-                    ],
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CustomCounterButton(
+                          icon: Icons.remove,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Text("2",
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white)),
+                        ),
+                        CustomCounterButton(icon: Icons.add),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -156,7 +183,7 @@ class DetailsProduct extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xffff7622),
+                    backgroundColor: const Color(0xffff7622),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -164,7 +191,8 @@ class DetailsProduct extends StatelessWidget {
                   onPressed: () {},
                   child: const Text(
                     "ADD TO CART",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white),
                   ),
                 ),
               ),

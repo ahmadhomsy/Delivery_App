@@ -63,7 +63,7 @@ class CustomProductCard extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.add_circle, color: Colors.orange),
+                  icon: const Icon(Icons.add_circle, color: Color(0xffff7622)),
                   onPressed: () {},
                 ),
               ],
