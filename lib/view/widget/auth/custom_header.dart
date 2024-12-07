@@ -11,7 +11,7 @@ class CustomHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 270,
+      height: 200,
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(AppImageAsset.backgroundImage),

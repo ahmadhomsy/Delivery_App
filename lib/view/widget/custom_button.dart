@@ -1,40 +1,33 @@
 import 'package:flutter/material.dart';
 
-import '../../core/constant/app_colors.dart';
-
 class CustomButton extends StatelessWidget {
-  final String text;
-  final double top;
-  final double bottom;
-  final void Function() onPressed;
+  final String nameButton;
+  final void Function() onPress;
   const CustomButton({
     super.key,
-    required this.top,
-    required this.bottom,
-    required this.text,
-    required this.onPressed,
+    required this.nameButton,
+    required this.onPress,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 62,
+    return SizedBox(
       width: double.infinity,
-      margin: EdgeInsets.only(
-        left: 50,
-        right: 50,
-        bottom: bottom,
-        top: top,
-      ),
-      child: MaterialButton(
-        onPressed: onPressed,
-        color: AppColors.deepOrange,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+      height: 50,
+      child: ElevatedButton(
+        onPressed: onPress,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xffff7622),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
         ),
         child: Text(
-          text,
-          style: const TextStyle(color: Colors.white, fontSize: 20),
+          nameButton,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
         ),
       ),
     );

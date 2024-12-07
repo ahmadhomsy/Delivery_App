@@ -11,30 +11,31 @@ class CustomFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.ltr,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          const CustomDot(),
-          CustomButton(
-            text: "Next",
-            onPressed: () {},
-            top: 20,
-            bottom: 15,
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushReplacementNamed(AppRoutesPage.login);
-            },
-            child: const Text(
-              "Skip",
-              style: TextStyle(
-                color: AppColors.grey,
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const CustomDot(),
+            CustomButton(
+              nameButton: "Next",
+              onPress: () {},
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed(AppRoutesPage.login);
+              },
+              child: const Text(
+                "Skip",
+                style: TextStyle(
+                  color: AppColors.grey,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -19,13 +19,21 @@ class CustomAccessLocation extends StatelessWidget {
             height: 270,
           ),
         ),
-        CustomButton(
-          top: 30,
-          bottom: 30,
-          text: "ACCESS LOCATION",
-          onPressed: () {
-            Navigator.of(context).pushReplacementNamed(AppRoutesPage.homePage);
-          },
+        const SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: CustomButton(
+            nameButton: "ACCESS LOCATION",
+            onPress: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(AppRoutesPage.homePage);
+            },
+          ),
+        ),
+        const SizedBox(
+          height: 20,
         ),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),

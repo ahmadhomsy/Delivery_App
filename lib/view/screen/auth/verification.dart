@@ -13,52 +13,33 @@ class Verification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width * 1,
-        height: MediaQuery.of(context).size.height * 1,
-        child: Stack(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             const CustomHeader(
               title: "Verification",
               bodyText: "We have sent a code to your email",
             ),
-            const CustomBackButton(),
-            Positioned.fill(
-              top: 222,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: AppColors.auth,
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const CustomVerifyRichText(),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                child: Column(
-                  children: [
-                    const Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 30.0, vertical: 15),
-                      child: Column(
-                        children: [
-                          CustomVerifyRichText(),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          CustomVerify(),
-                        ],
-                      ),
-                    ),
-                    CustomButton(
-                      text: "VERIFY",
-                      onPressed: () {
-                        Navigator.of(context)
-                            .pushReplacementNamed(AppRoutesPage.resetPassword);
-                      },
-                      top: 8,
-                      bottom: 25,
-                    ),
-                  ],
-                ),
+                  const CustomVerify(),
+                  const SizedBox(height: 24),
+                  CustomButton(
+                    nameButton: "VERIFY",
+                    onPress: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(AppRoutesPage.resetPassword);
+                    },
+                  ),
+                ],
               ),
             ),
           ],

@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../core/constant/app_colors.dart';
-import '../../../core/constant/routes_page.dart';
-import '../../../core/function/valid_input.dart';
-import '../../widget/auth/custom_body_login.dart';
-import '../../widget/auth/custom_footer_auth.dart';
-import '../../widget/auth/custom_forget_remember.dart';
+import 'package:order_ready/core/constant/routes_page.dart';
+import 'package:order_ready/view/widget/auth/custom_text_form.dart';
 import '../../widget/auth/custom_header.dart';
-import '../../widget/auth/custom_or.dart';
-import '../../widget/auth/custom_row_social.dart';
-import '../../widget/auth/custom_text_form.dart';
+import '../../widget/auth/custom_password_text_form.dart';
+import '../../widget/custom_address_text.dart';
 import '../../widget/custom_button.dart';
 
 class LogIn extends StatelessWidget {
@@ -20,97 +15,94 @@ class LogIn extends StatelessWidget {
 
     return Scaffold(
       body: SingleChildScrollView(
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width * 1,
-          height: MediaQuery.of(context).size.height * 1,
-          child: Stack(
-            children: [
-              const CustomHeader(
-                title: "Log In",
-                bodyText: "Please sign in to your existing account",
-              ),
-              Positioned.fill(
-                top: 222,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.auth,
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30),
-                    ),
-                  ),
-                  child: Column(
+        child: Column(
+          children: [
+            const CustomHeader(
+              title: "Log In",
+              bodyText: "Please sign in to your existing account",
+            ),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 30.0, vertical: 15),
-                        child: Column(
-                          children: [
-                            CustomTextForm(
-                              myValidator: (val) {
-                                val ??= "";
-                                return validInput(
-                                    val: val, min: 5, max: 50, type: "email");
-                              },
-                              obscure: false,
-                              label: "Email",
-                              isPhone: false,
-                              hintText: "example@gmail.com",
-                            ),
-                            CustomTextForm(
-                              myValidator: (val) {
-                                val ??= "";
-                                return validInput(
-                                    val: val,
-                                    min: 5,
-                                    max: 30,
-                                    type: "password");
-                              },
-                              label: "Password",
-                              isPhone: false,
-                              hintText: "enter your password",
-                              obscure: true,
-                            ),
-                            const SizedBox(
-                              height: 12,
-                            ),
-                            CustomForgetRemember(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed(AppRoutesPage.forgetPassword);
-                              },
-                            ),
-                          ],
-                        ),
+                      CustomAddressText(
+                        address: "EMAIL",
                       ),
-                      CustomButton(
-                        text: "Log In",
-                        onPressed: () {
-                          if (formState.currentState!.validate()) {
-                            Navigator.of(context).pushNamedAndRemoveUntil(
-                              AppRoutesPage.accessLocation,
-                              (Route<dynamic> route) => false,
-                            );
-                          }
-                        },
-                        top: 6,
-                        bottom: 25,
+                      SizedBox(height: 8),
+                      CustomTextForm(
+                        hintText: "example@gmail.com",
                       ),
-                      CustomFooterAuth(
-                        onTap: () {
-                          Navigator.of(context).pushNamed(AppRoutesPage.signUp);
-                        },
-                        text1: "Don’t have an account? ",
-                        text2: "Sign Up",
+                      SizedBox(height: 16),
+                      CustomAddressText(
+                        address: "PASSWORD",
                       ),
-                      const CustomOr(),
-                      const CustomRowSocial(),
+                      SizedBox(height: 8),
+                      CustomPasswordTextForm(
+                        hintText: "enter your password",
+                      ),
+                      SizedBox(height: 16),
                     ],
                   ),
-                ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Checkbox(
+                            value: false,
+                            onChanged: (value) {},
+                          ),
+                          const Text("Remember me"),
+                        ],
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(AppRoutesPage.forgetPassword);
+                        },
+                        child: const Text(
+                          "Forgot Password",
+                          style: TextStyle(color: Color(0xffff7622)),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
+                  CustomButton(
+                    onPress: () {
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          AppRoutesPage.accessLocation, (Route<dynamic> route) {
+                        return false;
+                      });
+                    },
+                    nameButton: "LOG IN",
+                  ),
+                  const SizedBox(height: 24),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Don't have an account?"),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushReplacementNamed(AppRoutesPage.signUp);
+                        },
+                        child: const Text(
+                          "SIGN UP",
+                          style: TextStyle(color: Color(0xffff7622)),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
