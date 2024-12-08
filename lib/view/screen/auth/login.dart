@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/auth/custom_text_form.dart';
+import '../../../core/services/services.dart';
 import '../../widget/auth/custom_header.dart';
 import '../../widget/auth/custom_password_text_form.dart';
 import '../../widget/custom_address_text.dart';
@@ -75,6 +76,7 @@ class LogIn extends StatelessWidget {
                   const SizedBox(height: 24),
                   CustomButton(
                     onPress: () {
+                      box.write('token', true);
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           AppRoutesPage.accessLocation, (Route<dynamic> route) {
                         return false;

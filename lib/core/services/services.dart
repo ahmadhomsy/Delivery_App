@@ -1,12 +1,4 @@
-import 'package:shared_preferences/shared_preferences.dart';
 
-class MyServices {
-  late SharedPreferences sharedPreferences;
+import 'package:get_storage/get_storage.dart';
 
-  Future<MyServices> init() async {
-    sharedPreferences = await SharedPreferences.getInstance();
-    return this;
-  }
-}
-
-initialServices() => MyServices().init();
+final box = GetStorage();

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/routes_page.dart';
 import '../../../core/function/valid_input.dart';
+import '../../../core/services/services.dart';
 import '../../widget/auth/custom_back_button.dart';
 import '../../widget/auth/custom_header.dart';
 import '../../widget/auth/custom_password_text_form.dart';
@@ -78,6 +79,8 @@ class SignUp extends StatelessWidget {
                   CustomButton(
                     nameButton: "SIGN UP",
                     onPress: () {
+                      box.write('token', true);
+
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           AppRoutesPage.accessLocation, (Route<dynamic> route) {
                         return false;

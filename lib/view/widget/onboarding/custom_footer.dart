@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/routes_page.dart';
+import '../../../core/services/services.dart';
 import '../custom_button.dart';
 import 'custom_dots.dart';
 
@@ -23,6 +24,7 @@ class CustomFooter extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
+                box.write('isFirstOpen', true);
                 Navigator.of(context).pushReplacementNamed(AppRoutesPage.login);
               },
               child: const Text(

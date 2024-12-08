@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
+import '../../core/services/services.dart';
 import '../widget/splash/custom_splash.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +17,11 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       const Duration(seconds: 3),
       () =>
-          Navigator.of(context).pushReplacementNamed(AppRoutesPage.onBoarding),
+          Navigator.of(context).pushReplacementNamed((box.read('token') != null)
+              ? AppRoutesPage.accessLocation
+              : (box.read('isFirstOpen') != null)
+                  ? AppRoutesPage.login
+                  : AppRoutesPage.onBoarding),
     );
   }
 
