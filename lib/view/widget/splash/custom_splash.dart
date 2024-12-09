@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import '../../../core/constant/image_asset.dart';
 
 class CustomSplash extends StatelessWidget {
@@ -7,10 +8,10 @@ class CustomSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset(
+      child: Lottie.asset(
         width: 200,
         height: 200,
-        AppImageAsset.splashScreen,
+        AppImageAsset.lottieSplash,
         fit: BoxFit.fill,
       ),
     );
