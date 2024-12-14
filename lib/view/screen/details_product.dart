@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/image_asset.dart';
+import 'package:order_ready/core/constant/routes_page.dart';
+import 'package:order_ready/view/widget/custom_appbar.dart';
+import 'package:order_ready/view/widget/custom_button.dart';
 
-import '../widget/details/custom__ingredient.dart';
+import '../widget/details/custom_counter.dart';
+import '../widget/details/custom_ingredient.dart';
 import '../widget/details/custom_counter_button.dart';
 import '../widget/details/custom_size_product.dart';
 
@@ -17,19 +21,8 @@ class DetailsProduct extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back, color: Colors.black),
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                  const Text(
-                    "Details",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(width: 30), // Placeholder for alignment
-                ],
+              const CustomAppbar(
+                appBarAddress: "Details",
               ),
               const SizedBox(height: 16),
               Stack(
@@ -160,42 +153,19 @@ class DetailsProduct extends StatelessWidget {
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        CustomCounterButton(
-                          icon: Icons.remove,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 16.0),
-                          child: Text("2",
-                              style:
-                                  TextStyle(fontSize: 16, color: Colors.white)),
-                        ),
-                        CustomCounterButton(icon: Icons.add),
-                      ],
+                    child: const CustomCounter(
+                      counter: 2,
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 16),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffff7622),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    "ADD TO CART",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white),
-                  ),
-                ),
-              ),
+              CustomButton(
+                nameButton: "ADD TO CART",
+                onPress: () {
+                  Navigator.of(context).pushNamed(AppRoutesPage.cart);
+                },
+              )
             ],
           ),
         ),

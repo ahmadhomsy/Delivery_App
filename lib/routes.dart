@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
+import 'package:order_ready/view/screen/new_address.dart';
 import 'package:order_ready/view/screen/auth/verification.dart';
 import 'package:order_ready/view/screen/auth/access_location.dart';
 import 'package:order_ready/view/screen/auth/forget_password.dart';
 import 'package:order_ready/view/screen/auth/login.dart';
 import 'package:order_ready/view/screen/auth/reset_password.dart';
 import 'package:order_ready/view/screen/auth/signup.dart';
+import 'package:order_ready/view/screen/cart.dart';
 import 'package:order_ready/view/screen/details_product.dart';
 import 'package:order_ready/view/screen/home_page.dart';
+import 'package:order_ready/view/screen/my_address.dart';
+import 'package:order_ready/view/screen/payment.dart';
 import 'package:order_ready/view/screen/restaurant_view.dart';
 import 'package:order_ready/view/screen/result_search.dart';
 import 'package:order_ready/view/screen/search.dart';
@@ -28,4 +32,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoutesPage.resultSearch: (context) => const ResultSearch(),
   AppRoutesPage.restaurantView: (context) => const RestaurantView(),
   AppRoutesPage.detailsProduct: (context) => const DetailsProduct(),
+  AppRoutesPage.cart: (context) => const Cart(),
+  AppRoutesPage.myAddress: (context) => const MyAddress(),
+  AppRoutesPage.newAddress: (context) => const NewAddress(),
+  AppRoutesPage.payment: (context) => const Payment(),
 };

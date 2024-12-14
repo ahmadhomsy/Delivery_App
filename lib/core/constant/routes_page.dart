@@ -12,4 +12,8 @@ class AppRoutesPage {
   static const String resultSearch = "resultSearch";
   static const String restaurantView = "restaurantView";
   static const String detailsProduct = "detailsProduct";
+  static const String cart = "cart";
+  static const String myAddress = "myAddress";
+  static const String newAddress = "newAddress";
+  static const String payment = "payment";
 }

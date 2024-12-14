@@ -24,16 +24,11 @@ class CustomProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: InkWell(
-              onTap: () {
-                Navigator.of(context).pushNamed(AppRoutesPage.detailsProduct);
-              },
-              child: Container(
-                margin: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(12),
-                ),
+            child: Container(
+              margin: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(12),
               ),
             ),
           ),
@@ -64,7 +59,10 @@ class CustomProductCard extends StatelessWidget {
                 ),
                 IconButton(
                   icon: const Icon(Icons.add_circle, color: Color(0xffff7622)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context)
+                        .pushNamed(AppRoutesPage.detailsProduct);
+                  },
                 ),
               ],
             ),

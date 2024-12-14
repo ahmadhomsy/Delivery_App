@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:order_ready/routes.dart';
+import 'package:order_ready/view/screen/payment.dart';
 import 'package:order_ready/view/screen/splash_screen.dart';
 
 void main() async {
@@ -17,12 +18,6 @@ void main() async {
   );
 }
 
-/*     if (context.locale.languageCode == 'en') {
-                context.setLocale(Locale('ar'));
-              } else {
-                context.setLocale(Locale('en'));
-              }
-*/
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -38,3 +33,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*     if (context.locale.languageCode == 'en') {
+                context.setLocale(Locale('ar'));
+              } else {
+                context.setLocale(Locale('en'));
+              }
+*/

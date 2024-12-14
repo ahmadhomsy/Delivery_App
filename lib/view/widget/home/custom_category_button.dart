@@ -19,13 +19,16 @@ class CustomCategoryButton extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
-            color: isSelected ? Colors.orange : Colors.grey[200],
+            color: isSelected ? const Color(0xffff7622) : Colors.blue[50],
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Text(
-            label,
-            style: TextStyle(
-              color: isSelected ? Colors.white : Colors.black54,
+          child: Center(
+            child: Text(
+              label,
+              style: TextStyle(
+                color: isSelected ? Colors.white : Colors.black54,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
