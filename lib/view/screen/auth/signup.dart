@@ -6,6 +6,7 @@ import '../../../core/constant/routes_page.dart';
 import '../../../core/function/valid_input.dart';
 import '../../../core/services/services.dart';
 import '../../widget/auth/custom_back_button.dart';
+import '../../widget/auth/custom_footer_auth.dart';
 import '../../widget/auth/custom_header.dart';
 import '../../widget/auth/custom_password_text_form.dart';
 import '../../widget/auth/custom_text_form.dart';
@@ -85,21 +86,13 @@ class SignUp extends StatelessWidget {
                     },
                   ),
                   SizedBox(height: 24.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("16".tr()),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context)
-                              .pushReplacementNamed(AppRoutesPage.login);
-                        },
-                        child: Text(
-                          "1".tr(),
-                          style: const TextStyle(color: Color(0xffff7622)),
-                        ),
-                      ),
-                    ],
+                  CustomFooterAuth(
+                    text1: "16",
+                    text2: "1",
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(AppRoutesPage.login);
+                    },
                   ),
                   SizedBox(height: 16.h),
                 ],

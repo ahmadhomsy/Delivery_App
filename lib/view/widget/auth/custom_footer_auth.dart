@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:order_ready/main.dart';
 import '../../../core/constant/app_colors.dart';
 
 class CustomFooterAuth extends StatelessWidget {
@@ -17,21 +20,13 @@ class CustomFooterAuth extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          text1,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-            color: Colors.grey,
-          ),
+          text1.tr(),
         ),
         InkWell(
           onTap: onTap,
           child: Text(
-            text2,
-            style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                color: AppColors.deepOrange),
+            text2.tr(),
+            style: const TextStyle(color: Color(0xffff7622)),
           ),
         ),
       ],

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/auth/custom_text_form.dart';
 import '../../../core/services/services.dart';
+import '../../widget/auth/custom_footer_auth.dart';
 import '../../widget/auth/custom_header.dart';
 import '../../widget/auth/custom_password_text_form.dart';
 import '../../widget/custom_address_text.dart';
@@ -58,21 +59,13 @@ class LogIn extends StatelessWidget {
                     nameButton: "1",
                   ),
                   SizedBox(height: 24.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("7".tr()),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context)
-                              .pushReplacementNamed(AppRoutesPage.signUp);
-                        },
-                        child: Text(
-                          "8".tr(),
-                          style: const TextStyle(color: Color(0xffff7622)),
-                        ),
-                      ),
-                    ],
+                  CustomFooterAuth(
+                    text1: "7",
+                    text2: "8",
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(AppRoutesPage.signUp);
+                    },
                   ),
                 ],
               ),

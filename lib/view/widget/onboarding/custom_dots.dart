@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/constant/app_colors.dart';
 import '../../../data/data_source/static/static.dart';
@@ -18,8 +19,8 @@ class CustomDot extends StatelessWidget {
             duration: const Duration(
               milliseconds: 900,
             ),
-            width: 6,
-            height: 6,
+            width: 6.w,
+            height: 6.h,
             decoration: BoxDecoration(
               color: Colors.grey,
               borderRadius: BorderRadius.circular(300),
