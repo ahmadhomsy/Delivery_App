@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/auth/custom_text_form.dart';
 import '../../../core/services/services.dart';
@@ -15,65 +17,36 @@ class LogIn extends StatelessWidget {
     GlobalKey<FormState>? formState = GlobalKey<FormState>();
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CustomHeader(
-              title: "Log In",
-              bodyText: "Please sign in to your existing account",
+            CustomHeader(
+              title: "1".tr(),
+              bodyText: "2".tr(),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomAddressText(
-                        address: "EMAIL",
-                      ),
-                      SizedBox(height: 8),
-                      CustomTextForm(
-                        hintText: "example@gmail.com",
-                      ),
-                      SizedBox(height: 16),
-                      CustomAddressText(
-                        address: "PASSWORD",
-                      ),
-                      SizedBox(height: 8),
-                      CustomPasswordTextForm(
-                        hintText: "enter your password",
-                      ),
-                      SizedBox(height: 16),
-                    ],
+                  CustomAddressText(
+                    address: "3".tr(),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Checkbox(
-                            value: false,
-                            onChanged: (value) {},
-                          ),
-                          const Text("Remember me"),
-                        ],
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.of(context)
-                              .pushNamed(AppRoutesPage.forgetPassword);
-                        },
-                        child: const Text(
-                          "Forgot Password",
-                          style: TextStyle(color: Color(0xffff7622)),
-                        ),
-                      ),
-                    ],
+                  SizedBox(height: 8.h),
+                  CustomTextForm(
+                    hintText: "4".tr(),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 16.h),
+                  CustomAddressText(
+                    address: "5".tr(),
+                  ),
+                  const SizedBox(height: 8),
+                  CustomPasswordTextForm(
+                    hintText: "6".tr(),
+                  ),
+                  SizedBox(height: 30.h),
                   CustomButton(
                     onPress: () {
                       box.write('token', true);
@@ -82,21 +55,21 @@ class LogIn extends StatelessWidget {
                         return false;
                       });
                     },
-                    nameButton: "LOG IN",
+                    nameButton: "1",
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Don't have an account?"),
-                      TextButton(
-                        onPressed: () {
+                      Text("7".tr()),
+                      GestureDetector(
+                        onTap: () {
                           Navigator.of(context)
                               .pushReplacementNamed(AppRoutesPage.signUp);
                         },
-                        child: const Text(
-                          "SIGN UP",
-                          style: TextStyle(color: Color(0xffff7622)),
+                        child: Text(
+                          "8".tr(),
+                          style: const TextStyle(color: Color(0xffff7622)),
                         ),
                       ),
                     ],

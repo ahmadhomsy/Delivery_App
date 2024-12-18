@@ -21,7 +21,7 @@ class CustomDot extends StatelessWidget {
             width: 6,
             height: 6,
             decoration: BoxDecoration(
-              color: AppColors.grey,
+              color: Colors.grey,
               borderRadius: BorderRadius.circular(300),
             ),
           ),

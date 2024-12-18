@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_ready/core/constant/routes_page.dart';
 
 import 'custom_icon_home.dart';
 import 'custom_notification_icon.dart';
@@ -12,7 +13,9 @@ class CustomHeaderHome extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomIconHome(
-          onPress: () {},
+          onPress: () {
+            Navigator.of(context).pushNamed(AppRoutesPage.profile);
+          },
           iconData: Icons.menu,
         ),
         const Column(

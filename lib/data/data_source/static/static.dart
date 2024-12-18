@@ -3,18 +3,9 @@ import '../../model/onboarding_model.dart';
 
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
-      title: "All your favorites",
-      body:
-          "Get all your loved foods in one once place,you just place the orer we do the rest",
-      image: AppImageAsset.onBoardingImageOne),
+      title: "17", body: "18", image: AppImageAsset.onBoardingImageOne),
   OnBoardingModel(
-      title: "Order from choosen chef",
-      body:
-          "Get all your loved foods in one once place,you just place the orer we do the rest",
-      image: AppImageAsset.onBoardingImageTwo),
+      title: "19", body: "18", image: AppImageAsset.onBoardingImageTwo),
   OnBoardingModel(
-      title: "Free delivery offers",
-      body:
-          "Get all your loved foods in one once place,you just place the orer we do the rest",
-      image: AppImageAsset.onBoardingImageThree),
+      title: "20", body: "18", image: AppImageAsset.onBoardingImageThree),
 ];

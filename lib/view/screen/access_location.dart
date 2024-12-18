@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../widget/auth/custom_access_location.dart';
+
+import '../widget/auth/custom_access_location.dart';
 
 class AccessLocation extends StatelessWidget {
   const AccessLocation({super.key});
@@ -7,6 +8,7 @@ class AccessLocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.white,
       body: CustomAccessLocation(),
     );
   }

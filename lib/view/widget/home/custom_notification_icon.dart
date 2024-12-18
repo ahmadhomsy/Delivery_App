@@ -10,11 +10,11 @@ class CustomNotificationIcon extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: Colors.grey[200],
             borderRadius: BorderRadius.circular(50),
           ),
           child: IconButton(
-            icon: const Icon(Icons.mail_outline, color: Colors.white),
+            icon: const Icon(Icons.mail_outline, color: Colors.black),
             onPressed: onPress,
           ),
         ),
@@ -24,7 +24,7 @@ class CustomNotificationIcon extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(4),
             decoration: const BoxDecoration(
-              color: Colors.orange,
+              color: Colors.red,
               shape: BoxShape.circle,
             ),
             child: const Text(

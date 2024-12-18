@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/constant/image_asset.dart';
 
@@ -11,7 +12,7 @@ class CustomHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 200,
+      height: 200.h,
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(AppImageAsset.backgroundImage),
@@ -24,17 +25,17 @@ class CustomHeader extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
-              height: 2,
-              fontSize: 30,
+            style: TextStyle(
+              height: 2.sp,
+              fontSize: 30.sp,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
           ),
           Text(
             bodyText,
-            style: const TextStyle(
-              fontSize: 16,
+            style: TextStyle(
+              fontSize: 16.sp,
               fontWeight: FontWeight.w400,
               color: Colors.white38,
             ),

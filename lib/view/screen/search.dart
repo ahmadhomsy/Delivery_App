@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import '../widget/custom_address_text.dart';
-import '../widget/filter/custom_filter_dialog.dart';
 import '../widget/home/custom_icon_home.dart';
 import '../widget/home/custom_notification_icon.dart';
 import '../widget/search/custom_food_popular.dart';
@@ -15,6 +14,7 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -51,11 +51,9 @@ class Search extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                // Search bar
                 const CustomTextFieldSearch(),
                 const SizedBox(height: 20),
 
-                // Recent keywords section
                 const CustomAddressText(
                   address: "Recent Keywords",
                 ),
@@ -80,7 +78,6 @@ class Search extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                // Suggested restaurants section
                 const CustomAddressText(
                   address: "Suggested Restaurants",
                 ),
@@ -110,13 +107,16 @@ class Search extends StatelessWidget {
                   children: const [
                     CustomFoodPopular(
                         name: "European Pizza",
-                        location: "Uttora Coffee House"),
+                        nameRestaurant: "Uttora Coffee House"),
                     CustomFoodPopular(
-                        name: "Buffalo Pizza", location: "Cafenio Coffee Club"),
+                        name: "Buffalo Pizza",
+                        nameRestaurant: "Cafenio Coffee Club"),
                     CustomFoodPopular(
-                        name: "Buffalo Pizza", location: "Cafenio Coffee Club"),
+                        name: "Buffalo Pizza",
+                        nameRestaurant: "Cafenio Coffee Club"),
                     CustomFoodPopular(
-                        name: "Buffalo Pizza", location: "Cafenio Coffee Club"),
+                        name: "Buffalo Pizza",
+                        nameRestaurant: "Cafenio Coffee Club"),
                   ],
                 ),
               ],

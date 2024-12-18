@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAddressText extends StatelessWidget {
   final String address;
@@ -8,8 +9,8 @@ class CustomAddressText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       address,
-      style: const TextStyle(
-        fontSize: 16,
+      style: TextStyle(
+        fontSize: 16.sp,
         fontWeight: FontWeight.bold,
       ),
     );

@@ -23,22 +23,18 @@ class NewAddress extends StatelessWidget {
             Container(
               height: 200,
               color: Colors.blueGrey[100],
-              child: Center(
-                child: Stack(
-                  alignment: Alignment.center,
+              child: const Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.location_on, size: 50, color: Colors.orange),
-                    Positioned(
-                      top: 80,
-                      child: Text(
-                        "Move to edit location",
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.black,
-                          backgroundColor: Colors.white,
-                        ),
+                    Text(
+                      "Move to edit location",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.black,
                       ),
                     ),
+                    Icon(Icons.location_on, size: 50, color: Colors.orange),
                   ],
                 ),
               ),

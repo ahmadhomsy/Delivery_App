@@ -12,4 +12,6 @@ class AppImageAsset {
   static const String masterCard = "$rootImage/master-card.png";
   static const String lottieSplash =
       "assets/lottie/Animation - 1733759741850.json";
+  static const String lottieCongratulations =
+      "assets/lottie/Animation - 1734287209047.json";
 }

@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/routes_page.dart';
 import '../../../core/function/valid_input.dart';
@@ -18,93 +20,88 @@ class SignUp extends StatelessWidget {
     GlobalKey<FormState>? formState = GlobalKey<FormState>();
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CustomHeader(
-              title: "Sign Up",
-              bodyText: "Please sign up to get started",
+            CustomHeader(
+              title: "8".tr(),
+              bodyText: "9".tr(),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomAddressText(
-                        address: "FIRST NAME",
-                      ),
-                      SizedBox(height: 8),
-                      CustomTextForm(
-                        hintText: "enter first name",
-                      ),
-                      SizedBox(height: 16),
-                      CustomAddressText(
-                        address: "LAST NAME",
-                      ),
-                      SizedBox(height: 8),
-                      CustomTextForm(
-                        hintText: "enter last name",
-                      ),
-                      SizedBox(height: 16),
-                      CustomAddressText(
-                        address: "EMAIL",
-                      ),
-                      SizedBox(height: 8),
-                      CustomTextForm(
-                        hintText: "example@gmail.com",
-                      ),
-                      SizedBox(height: 16),
-                      CustomAddressText(
-                        address: "PASSWORD",
-                      ),
-                      SizedBox(height: 8),
-                      CustomPasswordTextForm(
-                        hintText: "enter your password",
-                      ),
-                      SizedBox(height: 16),
-                      CustomAddressText(
-                        address: "RE-PASSWORD",
-                      ),
-                      SizedBox(height: 8),
-                      CustomPasswordTextForm(
-                        hintText: "confirm your password",
-                      ),
-                      SizedBox(height: 16),
-                    ],
+                  CustomAddressText(
+                    address: "10".tr(),
                   ),
+                  SizedBox(height: 8.h),
+                  CustomTextForm(
+                    hintText: "11".tr(),
+                  ),
+                  const SizedBox(height: 16),
+                  CustomAddressText(
+                    address: "12".tr(),
+                  ),
+                  SizedBox(height: 8.h),
+                  CustomTextForm(
+                    hintText: "13".tr(),
+                  ),
+                  SizedBox(height: 16.h),
+                  CustomAddressText(
+                    address: "3".tr(),
+                  ),
+                  SizedBox(height: 8.h),
+                  CustomTextForm(
+                    hintText: "4".tr(),
+                  ),
+                  SizedBox(height: 16.h),
+                  CustomAddressText(
+                    address: "5".tr(),
+                  ),
+                  SizedBox(height: 8.h),
+                  CustomPasswordTextForm(
+                    hintText: "6".tr(),
+                  ),
+                  SizedBox(height: 16.h),
+                  CustomAddressText(
+                    address: "14".tr(),
+                  ),
+                  SizedBox(height: 8.h),
+                  CustomPasswordTextForm(
+                    hintText: "15".tr(),
+                  ),
+                  SizedBox(height: 16.h),
                   CustomButton(
-                    nameButton: "SIGN UP",
+                    nameButton: "8",
                     onPress: () {
                       box.write('token', true);
-
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           AppRoutesPage.accessLocation, (Route<dynamic> route) {
                         return false;
                       });
                     },
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("you have an account?"),
-                      TextButton(
-                        onPressed: () {
+                      Text("16".tr()),
+                      GestureDetector(
+                        onTap: () {
                           Navigator.of(context)
                               .pushReplacementNamed(AppRoutesPage.login);
                         },
-                        child: const Text(
-                          "LOG IN",
-                          style: TextStyle(color: Color(0xffff7622)),
+                        child: Text(
+                          "1".tr(),
+                          style: const TextStyle(color: Color(0xffff7622)),
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                 ],
               ),
             ),

@@ -12,12 +12,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(
-              right: 20,
-              left: 20,
+              right: 10,
+              left: 10,
               top: 20,
             ),
             child: Column(

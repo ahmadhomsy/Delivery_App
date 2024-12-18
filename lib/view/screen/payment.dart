@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/image_asset.dart';
+import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/custom_appbar.dart';
 import 'package:order_ready/view/widget/custom_button.dart';
+import 'package:order_ready/view/widget/payment/custom_new_button.dart';
 import 'package:order_ready/view/widget/payment/custom_payment_method.dart';
+import '../widget/payment/custom_card_container.dart';
 
 class Payment extends StatelessWidget {
   const Payment({super.key});
@@ -34,9 +37,9 @@ class Payment extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-              CardContainer(),
+              const CustomCardContainer(),
               const SizedBox(height: 16),
-              AddNewButton(),
+              const CustomNewButton(),
               const SizedBox(height: 32),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,98 +62,16 @@ class Payment extends StatelessWidget {
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               CustomButton(
                 nameButton: "PAY & CONFIRM",
-                onPress: () {},
+                onPress: () {
+                  Navigator.of(context).pushNamed(AppRoutesPage.successFull);
+                },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-// Card Placeholder Widget
-class CardContainer extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.blueGrey[50],
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 6,
-            offset: Offset(0, 2),
-          )
-        ],
-      ),
-      child: Column(
-        children: [
-          Image.asset(
-            AppImageAsset.masterCard, // Placeholder image
-            height: 100,
-            fit: BoxFit.cover,
-          ),
-          SizedBox(height: 16),
-          Text(
-            "No master card added",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            ),
-          ),
-          SizedBox(height: 4),
-          Text(
-            "You can add a mastercard and save it for later",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.grey[600],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// Add New Button
-class AddNewButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        // Handle add new action
-      },
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 12),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: Colors.orange),
-        ),
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.add, color: Colors.orange),
-              SizedBox(width: 4),
-              Text(
-                "ADD NEW",
-                style: TextStyle(
-                  color: Colors.orange,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                ),
-              ),
             ],
           ),
         ),

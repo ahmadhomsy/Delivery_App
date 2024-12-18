@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
-import 'package:order_ready/view/widget/custom_address_text.dart';
 import 'package:order_ready/view/widget/result/custom_product_card.dart';
 
 import '../widget/filter/custom_filter_dialog.dart';
@@ -12,6 +11,7 @@ class ResultSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),

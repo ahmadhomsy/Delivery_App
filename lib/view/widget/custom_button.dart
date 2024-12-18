@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:order_ready/main.dart';
 
 class CustomButton extends StatelessWidget {
   final String nameButton;
@@ -13,7 +16,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 50,
+      height: 50.h,
       child: ElevatedButton(
         onPressed: onPress,
         style: ElevatedButton.styleFrom(
@@ -23,7 +26,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          nameButton,
+          nameButton.tr(),
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
