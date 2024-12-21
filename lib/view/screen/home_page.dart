@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:order_ready/view/widget/home/custom_address_categories.dart';
-import '../widget/home/custom_category_button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../widget/custom_address_text.dart';
 import '../widget/home/custom_header_home.dart';
-import '../widget/home/custom_restaurant_card.dart';
+import '../widget/home/custom_product_card_new.dart';
 import '../widget/home/custom_search_home.dart';
 import '../widget/home/custom_text_for_user.dart';
 
@@ -25,53 +25,44 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const CustomHeaderHome(),
-                const SizedBox(height: 20),
-                const CustomTextForUser(),
-                const SizedBox(height: 20),
-                const CustomTextFieldHome(),
-                const SizedBox(height: 20),
-                const CustomAddressCategories(address: "All Categories"),
-                const SizedBox(height: 10),
-                SizedBox(
-                  height: 40,
-                  width: double.infinity,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemCount: 10,
-                    itemBuilder: (BuildContext context, int index) {
-                      return const CustomCategoryButton(
-                          label: 'All', isSelected: false);
-                    },
-                  ),
+                SizedBox(height: 20.h),
+                const CustomTextForUser(
+                  nameUser: "ahmad",
                 ),
-                const SizedBox(height: 20),
-                const CustomAddressCategories(address: "Open Restaurants"),
-                const SizedBox(height: 10),
-                SizedBox(
-                  width: double.infinity,
-                  child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    physics: const ClampingScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 3,
-                    itemBuilder: (BuildContext context, int index) {
-                      return const Column(
-                        children: [
-                          CustomRestaurantCard(
-                            name: 'Rose Garden Restaurant',
-                            description: 'Burger - Chicken - Riche - Wings',
-                            rating: 4.7,
-                            deliveryFee: 'Free',
-                            time: '20 min',
-                          ),
-                          SizedBox(
-                            height: 20,
-                          )
-                        ],
-                      );
-                    },
+                SizedBox(height: 20.h),
+                const CustomTextFieldHome(),
+                SizedBox(height: 20.h),
+                CustomAddressText(
+                  address: "27",
+                ),
+                SizedBox(height: 10.h),
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.8,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
                   ),
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return CustomProductCardNew(
+                      title: [
+                        'Burger Bistro',
+                        'Smokin\' Burger',
+                        'Buffalo Burgers',
+                        'Bullseye Burgers'
+                      ][index],
+                      subtitle: [
+                        'Rose Garden',
+                        'Cafenio Restaurant',
+                        'Kaji Firm Kitchen',
+                        'Kabab Restaurant'
+                      ][index],
+                      price: ['\$40', '\$60', '\$75', '\$94'][index],
+                    );
+                  },
                 ),
               ],
             ),

@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 
 class CustomTextFieldHome extends StatelessWidget {
@@ -12,7 +14,7 @@ class CustomTextFieldHome extends StatelessWidget {
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        height: 50,
+        height: 50.h,
         decoration: BoxDecoration(
           color: Colors.grey[200],
           borderRadius: BorderRadius.circular(10),
@@ -20,10 +22,10 @@ class CustomTextFieldHome extends StatelessWidget {
         child: Row(
           children: [
             const Icon(Icons.search, color: Colors.grey),
-            const SizedBox(width: 10),
+            SizedBox(width: 10.w),
             Text(
-              'Go to search dishes, restaurants',
-              style: TextStyle(color: Colors.grey[600], fontSize: 16),
+              '26'.tr(),
+              style: TextStyle(color: Colors.grey[600], fontSize: 16.sp),
             ),
           ],
         ),

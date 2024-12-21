@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:order_ready/routes.dart';
-import 'package:order_ready/view/screen/auth/login.dart';
-import 'package:order_ready/view/screen/onboarding.dart';
-import 'package:order_ready/view/screen/payment.dart';
 import 'package:order_ready/view/screen/splash_screen.dart';
-import 'package:order_ready/view/screen/success_full.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +14,7 @@ void main() async {
         supportedLocales: const [Locale('en'), Locale('ar')],
         path: 'lang',
         fallbackLocale: const Locale('en'),
-        child: const MyApp()),
+        child: MyApp()),
   );
 }
 

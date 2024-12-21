@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constant/image_asset.dart';
 import '../../../core/constant/routes_page.dart';
 import '../custom_button.dart';
@@ -15,33 +17,33 @@ class CustomAccessLocation extends StatelessWidget {
           borderRadius: BorderRadius.circular(1000),
           child: Image.asset(
             AppImageAsset.accessLocation,
-            width: 270,
-            height: 270,
+            width: 270.w,
+            height: 270.h,
           ),
         ),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: 20.h,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: CustomButton(
-            nameButton: "ACCESS LOCATION",
+            nameButton: "28",
             onPress: () {
               Navigator.of(context)
                   .pushReplacementNamed(AppRoutesPage.homePage);
             },
           ),
         ),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: 20.h,
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
-            "D-FOOD WILL ACCESS YOUR LOCATION ONLY WHILE USING THE APP",
+            "29".tr(),
             textAlign: TextAlign.center,
-            style:
-                TextStyle(fontSize: 16, height: 2, fontWeight: FontWeight.w400),
+            style: TextStyle(
+                fontSize: 16.sp, height: 2.h, fontWeight: FontWeight.w400),
           ),
         ),
       ],

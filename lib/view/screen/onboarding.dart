@@ -11,19 +11,21 @@ class OnBoarding extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(
-              width: double.infinity,
-              height: 500.h,
-              child: const CustomSliderOnBoarding(),
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: 150.h,
-              child: const CustomFooter(),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                width: double.infinity,
+                height: 500.h,
+                child: const CustomSliderOnBoarding(),
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: 150.h,
+                child: const CustomFooter(),
+              ),
+            ],
+          ),
         ),
       ),
     );
