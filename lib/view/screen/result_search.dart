@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/result/custom_product_card.dart';
 
@@ -16,10 +18,9 @@ class ResultSearch extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: ListView(
-            scrollDirection: Axis.vertical,
             children: [
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -30,20 +31,20 @@ class ResultSearch extends StatelessWidget {
                       Navigator.of(context).pop();
                     },
                   ),
-                  DropdownButton<String>(
-                    value: 'Burger',
-                    items: const [
-                      DropdownMenuItem(value: 'Burger', child: Text('BURGER')),
-                      DropdownMenuItem(value: 'Pizza', child: Text('PIZZA')),
-                      DropdownMenuItem(value: 'Drinks', child: Text('DRINKS')),
-                    ],
-                    onChanged: (value) {},
+                  Text(
+                    "36".tr(),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Row(
                     children: [
                       IconButton(
                         icon: const Icon(Icons.search, color: Colors.black),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(AppRoutesPage.search);
+                        },
                       ),
                       IconButton(
                         icon: const Icon(Icons.filter_list_outlined,
@@ -59,12 +60,12 @@ class ResultSearch extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 8),
-              const Text(
-                'Popular Burgers',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              SizedBox(height: 8.h),
+              Text(
+                '37'.tr(),
+                style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: 8.h),
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -93,12 +94,12 @@ class ResultSearch extends StatelessWidget {
                   );
                 },
               ),
-              const SizedBox(height: 16),
-              const Text(
-                'Open Restaurants',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              SizedBox(height: 16.h),
+              Text(
+                '38'.tr(),
+                style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
               SizedBox(
                 width: double.infinity,
                 child: ListView.builder(

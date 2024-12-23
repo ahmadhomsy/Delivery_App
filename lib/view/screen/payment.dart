@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/image_asset.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/custom_appbar.dart';
@@ -20,7 +22,7 @@ class Payment extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomAppbar(appBarAddress: "Payment"),
+              const CustomAppbar(appBarAddress: "50"),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -36,19 +38,19 @@ class Payment extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               const CustomCardContainer(),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               const CustomNewButton(),
-              const SizedBox(height: 32),
+              SizedBox(height: 32.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "TOTAL:",
+                    "48".tr(),
                     style: TextStyle(
                       color: Colors.grey[600],
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -56,7 +58,7 @@ class Payment extends StatelessWidget {
                     "\$96",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 22,
+                      fontSize: 22.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -64,13 +66,13 @@ class Payment extends StatelessWidget {
               ),
               const Spacer(),
               CustomButton(
-                nameButton: "PAY & CONFIRM",
+                nameButton: "52",
                 onPress: () {
                   Navigator.of(context).pushNamed(AppRoutesPage.successFull);
                 },
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               )
             ],
           ),

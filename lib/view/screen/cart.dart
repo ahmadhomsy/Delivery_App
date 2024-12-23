@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import '../widget/cart/custom_cart_item.dart';
 import '../widget/custom_button.dart';
@@ -24,22 +26,22 @@ class Cart extends StatelessWidget {
                       Navigator.of(context).pop();
                     },
                   ),
-                  const Text(
-                    "Cart",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  Text(
+                    "44".tr(),
+                    style: TextStyle(color: Colors.white, fontSize: 20.sp),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
-                      "EDIT ITEMS",
+                    child: Text(
+                      "45".tr(),
                       style: TextStyle(color: Colors.orange),
                     ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Expanded(
               child: ListView.builder(
@@ -47,7 +49,7 @@ class Cart extends StatelessWidget {
                 itemCount: 8,
                 itemBuilder: (BuildContext context, int index) {
                   return const CustomCartItem(
-                      title: "title", price: 2, quantity: 2);
+                      counter: 2, title: "title", price: 2, quantity: 2);
                 },
               ),
             ),
@@ -64,14 +66,14 @@ class Cart extends StatelessWidget {
                 children: [
                   // DELIVERY ADDRESS Label
                   Text(
-                    "DELIVERY ADDRESS",
+                    "46".tr(),
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       color: Colors.grey[500],
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8.h),
                   // Address Box
                   Container(
                     padding: const EdgeInsets.all(10),
@@ -94,47 +96,47 @@ class Cart extends StatelessWidget {
                         TextButton(
                           onPressed: () {
                             Navigator.of(context)
-                                .pushNamed(AppRoutesPage.myAddress);
+                                .pushReplacementNamed(AppRoutesPage.newAddress);
                           },
-                          child: const Text(
-                            "EDIT",
+                          child: Text(
+                            "47".tr(),
                             style: TextStyle(
                               color: Colors.orange,
-                              fontSize: 14,
+                              fontSize: 14.sp,
                             ),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  SizedBox(height: 15.h),
                   // Total Section
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "TOTAL:",
+                        "48".tr(),
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           color: Colors.grey[700],
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Text(
+                      Text(
                         "\$96",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 18.sp,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 10.h,
                   ),
                   CustomButton(
-                    nameButton: "PLACE ORDER",
+                    nameButton: "49",
                     onPress: () {
                       Navigator.of(context).pushNamed(AppRoutesPage.payment);
                     },

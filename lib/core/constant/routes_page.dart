@@ -10,7 +10,6 @@ class AppRoutesPage {
   static const String restaurantView = "restaurantView";
   static const String detailsProduct = "detailsProduct";
   static const String cart = "cart";
-  static const String myAddress = "myAddress";
   static const String newAddress = "newAddress";
   static const String payment = "payment";
   static const String successFull = "successFull";

@@ -7,7 +7,6 @@ import 'package:order_ready/view/screen/auth/signup.dart';
 import 'package:order_ready/view/screen/cart.dart';
 import 'package:order_ready/view/screen/details_product.dart';
 import 'package:order_ready/view/screen/home_page.dart';
-import 'package:order_ready/view/screen/my_address.dart';
 import 'package:order_ready/view/screen/payment.dart';
 import 'package:order_ready/view/screen/profile.dart';
 import 'package:order_ready/view/screen/restaurant_view.dart';
@@ -29,7 +28,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoutesPage.restaurantView: (context) => const RestaurantView(),
   AppRoutesPage.detailsProduct: (context) => const DetailsProduct(),
   AppRoutesPage.cart: (context) => const Cart(),
-  AppRoutesPage.myAddress: (context) => const MyAddress(),
   AppRoutesPage.newAddress: (context) => const NewAddress(),
   AppRoutesPage.payment: (context) => const Payment(),
   AppRoutesPage.successFull: (context) => const SuccessFull(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/view/widget/profile/custom_menu.dart';
 import 'package:order_ready/view/widget/profile/custom_section.dart';
 
@@ -18,10 +19,9 @@ class Profile extends StatelessWidget {
             children: [
               const Padding(
                 padding: EdgeInsets.all(8.0),
-                child: CustomAppbar(appBarAddress: "Profile"),
+                child: CustomAppbar(appBarAddress: "55"),
               ),
-              const SizedBox(height: 16),
-              // Profile Picture
+              SizedBox(height: 8.h),
               const CircleAvatar(
                 radius: 50,
                 child: Icon(
@@ -30,36 +30,26 @@ class Profile extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 16),
-              // User Name and Bio
-              const Text(
+              SizedBox(height: 16.h),
+              Text(
                 "Vishal Khadok",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
-              const SizedBox(height: 4),
-              Text(
-                "I love fast food",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey[500],
-                ),
-              ),
-              const SizedBox(height: 24),
-              // Menu Items
+              SizedBox(height: 24.h),
               CustomSection(
                 children: [
                   CustomMenu(
-                    title: "Personal Info",
+                    title: "56",
                     icon: Icons.person_outline,
                     onTap: () {},
                   ),
                   CustomMenu(
-                    title: "Addresses",
-                    icon: Icons.location_on_outlined,
+                    title: "44",
+                    icon: Icons.shopping_cart_outlined,
                     onTap: () {},
                   ),
                 ],
@@ -67,57 +57,41 @@ class Profile extends StatelessWidget {
               CustomSection(
                 children: [
                   CustomMenu(
-                    title: "Cart",
-                    icon: Icons.shopping_cart_outlined,
-                    onTap: () {},
-                  ),
-                  CustomMenu(
-                    title: "Favourite",
+                    title: "57",
                     icon: Icons.favorite_border,
                     onTap: () {},
                   ),
                   CustomMenu(
-                    title: "Notifications",
-                    icon: Icons.notifications_outlined,
-                    onTap: () {},
-                  ),
-                  CustomMenu(
-                    title: "Payment Method",
-                    icon: Icons.payment,
-                    onTap: () {},
-                  ),
-                ],
-              ),
-              CustomSection(
-                children: [
-                  CustomMenu(
-                    title: "FAQs",
+                    title: "58",
                     icon: Icons.help_outline,
                     onTap: () {},
                   ),
                   CustomMenu(
-                    title: "User Reviews",
-                    icon: Icons.star_outline,
-                    onTap: () {},
-                  ),
-                  CustomMenu(
-                    title: "Settings",
+                    title: "59",
                     icon: Icons.settings_outlined,
                     onTap: () {},
                   ),
+                  // CustomMenu(
+                  //   title: "Notifications",
+                  //   icon: Icons.notifications_outlined,
+                  //   onTap: () {},
+                  // ),
+                  // CustomMenu(
+                  //   title: "Payment Method",
+                  //   icon: Icons.payment,
+                  //   onTap: () {},
+                  // ),
                 ],
               ),
-              // Logout Button
               CustomSection(
                 children: [
                   CustomMenu(
-                    title: "Log Out",
+                    title: "60",
                     icon: Icons.logout,
                     onTap: () {},
                   )
                 ],
               ),
-              SizedBox(height: 16),
             ],
           ),
         ),

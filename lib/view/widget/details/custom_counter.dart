@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'custom_counter_button.dart';
 
 class CustomCounter extends StatelessWidget {
@@ -10,15 +11,19 @@ class CustomCounter extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        const CustomCounterButton(
+        CustomCounterButton(
           icon: Icons.remove,
+          onTap: () {},
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Text("$counter",
-              style: const TextStyle(fontSize: 16, color: Colors.white)),
+              style: TextStyle(fontSize: 16.sp, color: Colors.white)),
         ),
-        const CustomCounterButton(icon: Icons.add),
+        CustomCounterButton(
+          icon: Icons.add,
+          onTap: () {},
+        ),
       ],
     );
   }

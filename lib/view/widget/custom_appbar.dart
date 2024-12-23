@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAppbar extends StatelessWidget {
   final String appBarAddress;
@@ -14,10 +16,10 @@ class CustomAppbar extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
         Text(
-          appBarAddress,
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          appBarAddress.tr(),
+          style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
         ),
-        const SizedBox(width: 30),
+        SizedBox(width: 30.w),
       ],
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/image_asset.dart';
 
 import '../details/custom_counter.dart';
@@ -8,12 +9,14 @@ class CustomCartItem extends StatelessWidget {
   final String title;
   final double price;
   final int quantity;
+  final int counter;
 
   const CustomCartItem(
       {super.key,
       required this.title,
       required this.price,
-      required this.quantity});
+      required this.quantity,
+      required this.counter});
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +30,8 @@ class CustomCartItem extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 50,
-            height: 50,
+            width: 50.w,
+            height: 50.h,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Image.asset(
@@ -37,25 +40,25 @@ class CustomCartItem extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 10),
+          SizedBox(width: 10.w),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: const TextStyle(color: Colors.white, fontSize: 16),
+                  style: TextStyle(color: Colors.white, fontSize: 16.sp),
                 ),
-                const SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Text(
                   "\$$price",
-                  style: TextStyle(color: Colors.orange, fontSize: 16),
+                  style: TextStyle(color: Colors.orange, fontSize: 16.sp),
                 ),
               ],
             ),
           ),
-          const CustomCounter(
-            counter: 2,
+          CustomCounter(
+            counter: counter,
           ),
         ],
       ),

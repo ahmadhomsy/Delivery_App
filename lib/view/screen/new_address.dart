@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/address/custom_info_field.dart';
 import 'package:order_ready/view/widget/custom_appbar.dart';
 import 'package:order_ready/view/widget/custom_button.dart';
@@ -14,10 +17,25 @@ class NewAddress extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(vertical: 11),
-              child: CustomAppbar(
-                appBarAddress: "Add New Location",
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.arrow_back, color: Colors.black),
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(AppRoutesPage.newAddress);
+                    },
+                  ),
+                  Text(
+                    "53".tr(),
+                    style:
+                        TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(width: 30.w),
+                ],
               ),
             ),
             Container(
@@ -39,8 +57,8 @@ class NewAddress extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 16,
+            SizedBox(
+              height: 16.h,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -52,7 +70,7 @@ class NewAddress extends StatelessWidget {
                     icon: Icons.location_on,
                     infoText: "3235 Royal Ln. Mesa, New Jersy 34567",
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   const Row(
                     children: [
                       Expanded(
@@ -70,45 +88,20 @@ class NewAddress extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   const CustomInfoField(
                     label: "APPARTMENT",
                     infoText: "345",
                   ),
-                  const SizedBox(height: 16),
-                  Text(
-                    "LABEL AS",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  const Row(
-                    children: [
-                      CustomCategoryButton(
-                        label: "Home",
-                        isSelected: true,
-                      ),
-                      SizedBox(width: 8),
-                      CustomCategoryButton(
-                        label: "Work",
-                        isSelected: false,
-                      ),
-                      SizedBox(width: 8),
-                      CustomCategoryButton(
-                        label: "Other",
-                        isSelected: false,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 32,
+                  SizedBox(
+                    height: 100.h,
                   ),
                   CustomButton(
-                    nameButton: "SAVE LOCATION",
-                    onPress: () {},
+                    nameButton: "54",
+                    onPress: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(AppRoutesPage.cart);
+                    },
                   ),
                 ],
               ),

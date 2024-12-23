@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
+import 'package:order_ready/main.dart';
 
 class CustomRestaurantCard extends StatelessWidget {
   final String name;
@@ -31,11 +33,11 @@ class CustomRestaurantCard extends StatelessWidget {
           children: [
             // Placeholder for Image
             Container(
-              width: 100,
-              height: 75,
+              width: 100.w,
+              height: 75.h,
               color: Colors.grey,
             ),
-            const SizedBox(width: 15),
+            SizedBox(width: 15.w),
             // Restaurant Details
             Expanded(
               child: Column(
@@ -43,30 +45,30 @@ class CustomRestaurantCard extends StatelessWidget {
                 children: [
                   Text(
                     name,
-                    style: const TextStyle(
-                      fontSize: 16,
+                    style: TextStyle(
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 5.h),
                   Text(
                     description,
                     style: const TextStyle(
                       color: Colors.black54,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10.h),
                   Row(
                     children: [
                       const Icon(Icons.star, color: Colors.orange, size: 16),
-                      const SizedBox(width: 5),
+                      SizedBox(width: 5.w),
                       Text(
                         '$rating',
-                        style: const TextStyle(
-                          fontSize: 14,
+                        style: TextStyle(
+                          fontSize: 14.sp,
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      SizedBox(width: 10.w),
                       Text('| $deliveryFee | $time'),
                     ],
                   ),

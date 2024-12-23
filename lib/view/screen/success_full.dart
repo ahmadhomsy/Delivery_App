@@ -1,8 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
-
 import '../../core/constant/image_asset.dart';
-import '../../core/constant/routes_page.dart';
 import '../widget/custom_button.dart';
 
 class SuccessFull extends StatelessWidget {
@@ -12,49 +12,58 @@ class SuccessFull extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Lottie.asset(
-              width: 200,
-              height: 200,
-              AppImageAsset.lottieCongratulations,
-              fit: BoxFit.fill,
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Center(
+                  child: Lottie.asset(
+                    width: 200.w,
+                    height: 200.h,
+                    AppImageAsset.lottieCongratulations,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    "39".tr(),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 20.sp,
+                        height: 2.h,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    "40".tr(),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 16.sp,
+                        height: 2.h,
+                        fontWeight: FontWeight.w400),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: CustomButton(
+                    nameButton: "41",
+                    onPress: () {},
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "Congratulations",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontSize: 20, height: 2, fontWeight: FontWeight.bold),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "You successfully maked a payment,enjoy our service!",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontSize: 16, height: 2, fontWeight: FontWeight.w400),
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: CustomButton(
-              nameButton: "Track Order",
-              onPress: () {},
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

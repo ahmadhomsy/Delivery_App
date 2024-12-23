@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomNewButton extends StatelessWidget {
   const CustomNewButton({super.key});
@@ -15,18 +17,18 @@ class CustomNewButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           border: Border.all(color: Colors.orange),
         ),
-        child: const Center(
+        child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(Icons.add, color: Colors.orange),
-              SizedBox(width: 4),
+              SizedBox(width: 4.w),
               Text(
-                "ADD NEW",
+                "51".tr(),
                 style: TextStyle(
                   color: Colors.orange,
                   fontWeight: FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 14.sp,
                 ),
               ),
             ],

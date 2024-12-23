@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 
 class CustomFoodPopular extends StatelessWidget {
@@ -18,7 +19,7 @@ class CustomFoodPopular extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            height: 100,
+            height: 100.h,
             decoration: BoxDecoration(
               color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(8),
@@ -27,10 +28,10 @@ class CustomFoodPopular extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             name,
-            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
           ),
           Text(nameRestaurant,
-              style: const TextStyle(fontSize: 12, color: Colors.grey)),
+              style: TextStyle(fontSize: 12.sp, color: Colors.grey)),
         ],
       ),
     );
