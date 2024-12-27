@@ -7,6 +7,9 @@ import 'package:order_ready/view/widget/custom_appbar.dart';
 import 'package:order_ready/view/widget/custom_button.dart';
 import 'package:order_ready/view/widget/payment/custom_new_button.dart';
 import 'package:order_ready/view/widget/payment/custom_payment_method.dart';
+import '../widget/auth/custom_text_form.dart';
+import '../widget/auth/custom_text_form_number.dart';
+import '../widget/custom_address_text.dart';
 import '../widget/payment/custom_card_container.dart';
 
 class Payment extends StatelessWidget {
@@ -39,10 +42,16 @@ class Payment extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20.h),
-              const CustomCardContainer(),
-              SizedBox(height: 16.h),
-              const CustomNewButton(),
-              SizedBox(height: 32.h),
+              CustomAddressText(
+                address: "3",
+              ),
+              SizedBox(height: 8.h),
+              CustomTextFormNumber(
+                hintText: "4".tr(),
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

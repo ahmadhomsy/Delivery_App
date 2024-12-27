@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/auth/custom_text_form.dart';
+import 'package:order_ready/view/widget/auth/custom_text_form_number.dart';
 import '../../../core/services/services.dart';
 import '../../widget/auth/custom_footer_auth.dart';
 import '../../widget/auth/custom_header.dart';
@@ -33,15 +34,15 @@ class LogIn extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomAddressText(
-                    address: "3".tr(),
+                    address: "3",
                   ),
                   SizedBox(height: 8.h),
-                  CustomTextForm(
+                  CustomTextFormNumber(
                     hintText: "4".tr(),
                   ),
                   SizedBox(height: 16.h),
                   CustomAddressText(
-                    address: "5".tr(),
+                    address: "5",
                   ),
                   const SizedBox(height: 8),
                   CustomPasswordTextForm(

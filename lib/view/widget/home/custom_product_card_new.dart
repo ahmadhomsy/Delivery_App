@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
@@ -19,7 +20,7 @@ class CustomProductCardNew extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[200],
+        color: Colors.blue[50],
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -35,32 +36,28 @@ class CustomProductCardNew extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                Directionality(
-                  textDirection: TextDirection.ltr,
-                  child: Positioned(
-                    top: 0,
-                    left: 0,
-                    child: Container(
-                      width: 60.w,
-                      height: 60.h,
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.only(topLeft: Radius.circular(5)),
-                        gradient: LinearGradient(
-                          colors: [Colors.red, Colors.transparent],
-                          stops: [0.5, 0.5],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  child: Container(
+                    width: 60.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.only(topLeft: Radius.circular(5)),
+                      gradient: LinearGradient(
+                        colors: [Colors.red, Colors.transparent],
+                        stops: [0.5, 0.5],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 6, left: 5),
-                        child: Text(
-                          'New',
-                          textAlign: TextAlign.left,
-                          style:
-                              TextStyle(color: Colors.white, fontSize: 14.sp),
-                        ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 6, left: 5),
+                      child: Text(
+                        '71'.tr(),
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.white, fontSize: 14.sp),
                       ),
                     ),
                   ),

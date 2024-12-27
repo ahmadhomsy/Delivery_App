@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.AMGA.order_ready"
-    compileSdk = flutter.compileSdkVersion
+    compileSdkVersion 34
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

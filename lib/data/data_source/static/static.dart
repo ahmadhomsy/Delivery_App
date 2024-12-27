@@ -9,3 +9,13 @@ List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
       title: "20", body: "18", image: AppImageAsset.onBoardingImageThree),
 ];
+List<Map<String, String>> faqs = [
+  {
+    'question': '62',
+    'answer': '63',
+  },
+  {
+    'question': '64',
+    'answer': '65',
+  },
+];

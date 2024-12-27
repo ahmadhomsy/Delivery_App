@@ -15,10 +15,10 @@ class CustomCounterButton extends StatelessWidget {
         width: 36.w,
         height: 36.h,
         decoration: BoxDecoration(
-          color: Colors.grey[800],
+          color: Colors.grey.shade200,
           borderRadius: BorderRadius.circular(30),
         ),
-        child: Icon(icon, color: Colors.white),
+        child: Icon(icon, color: Colors.orange.shade700),
       ),
     );
   }

@@ -11,7 +11,7 @@ class CustomAddressText extends StatelessWidget {
     return Text(
       address.tr(),
       style: TextStyle(
-        fontSize: 16.sp,
+        fontSize: 18.sp,
         fontWeight: FontWeight.bold,
       ),
     );

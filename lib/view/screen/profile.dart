@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/widget/profile/custom_menu.dart';
 import 'package:order_ready/view/widget/profile/custom_section.dart';
 
@@ -50,7 +51,9 @@ class Profile extends StatelessWidget {
                   CustomMenu(
                     title: "44",
                     icon: Icons.shopping_cart_outlined,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(AppRoutesPage.cart);
+                    },
                   ),
                 ],
               ),
@@ -59,17 +62,23 @@ class Profile extends StatelessWidget {
                   CustomMenu(
                     title: "57",
                     icon: Icons.favorite_border,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(AppRoutesPage.favorite);
+                    },
                   ),
                   CustomMenu(
                     title: "58",
                     icon: Icons.help_outline,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(AppRoutesPage.faqs);
+                    },
                   ),
                   CustomMenu(
                     title: "59",
                     icon: Icons.settings_outlined,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(AppRoutesPage.settings);
+                    },
                   ),
                   // CustomMenu(
                   //   title: "Notifications",
@@ -88,7 +97,9 @@ class Profile extends StatelessWidget {
                   CustomMenu(
                     title: "60",
                     icon: Icons.logout,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(AppRoutesPage.login);
+                    },
                   )
                 ],
               ),

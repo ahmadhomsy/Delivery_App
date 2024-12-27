@@ -111,12 +111,9 @@ class DetailsProduct extends StatelessWidget {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        color: Colors.black,
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: const CustomCounter(
-                        counter: 2,
-                      ),
+                      child: const CustomCounter(),
                     ),
                   ],
                 ),
@@ -124,7 +121,11 @@ class DetailsProduct extends StatelessWidget {
                 CustomButton(
                   nameButton: "35",
                   onPress: () {
-                    Navigator.of(context).pushNamed(AppRoutesPage.cart);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('تمت الاضافة بنجاح'),
+                      ),
+                    );
                   },
                 )
               ],

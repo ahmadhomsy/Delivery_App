@@ -14,13 +14,14 @@ class CustomNotificationIcon extends StatelessWidget {
             borderRadius: BorderRadius.circular(50),
           ),
           child: IconButton(
-            icon: const Icon(Icons.mail_outline, color: Colors.black),
+            icon: const Icon(Icons.shopping_cart_outlined,
+                color: Color(0xffff7622)),
             onPressed: onPress,
           ),
         ),
         Positioned(
-          right: 10,
-          top: 10,
+          right: 5,
+          top: 5,
           child: Container(
             padding: const EdgeInsets.all(4),
             decoration: const BoxDecoration(

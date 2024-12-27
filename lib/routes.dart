@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:order_ready/core/constant/routes_page.dart';
 import 'package:order_ready/view/screen/access_location.dart';
+import 'package:order_ready/view/screen/faqs.dart';
+import 'package:order_ready/view/screen/favorite.dart';
 import 'package:order_ready/view/screen/new_address.dart';
 import 'package:order_ready/view/screen/auth/login.dart';
 import 'package:order_ready/view/screen/auth/signup.dart';
@@ -12,6 +14,7 @@ import 'package:order_ready/view/screen/profile.dart';
 import 'package:order_ready/view/screen/restaurant_view.dart';
 import 'package:order_ready/view/screen/result_search.dart';
 import 'package:order_ready/view/screen/search.dart';
+import 'package:order_ready/view/screen/settings.dart';
 import 'package:order_ready/view/screen/splash_screen.dart';
 import 'package:order_ready/view/screen/onboarding.dart';
 import 'package:order_ready/view/screen/success_full.dart';
@@ -32,4 +35,7 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoutesPage.payment: (context) => const Payment(),
   AppRoutesPage.successFull: (context) => const SuccessFull(),
   AppRoutesPage.profile: (context) => const Profile(),
+  AppRoutesPage.favorite: (context) => const Favorite(),
+  AppRoutesPage.faqs: (context) => const FAQs(),
+  AppRoutesPage.settings: (context) => const Settings(),
 };

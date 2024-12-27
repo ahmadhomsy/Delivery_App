@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const CustomHeaderHome(),
-                SizedBox(height: 20.h),
+                SizedBox(height: 10.h),
                 const CustomTextForUser(
                   nameUser: "ahmad",
                 ),

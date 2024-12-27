@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
+import 'package:order_ready/core/constant/routes_page.dart';
 import '../../core/constant/image_asset.dart';
 import '../widget/custom_button.dart';
 
@@ -57,7 +58,11 @@ class SuccessFull extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: CustomButton(
                     nameButton: "41",
-                    onPress: () {},
+                    onPress: () {
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          AppRoutesPage.homePage,
+                          (Route<dynamic> route) => false);
+                    },
                   ),
                 ),
               ],

@@ -14,4 +14,7 @@ class AppRoutesPage {
   static const String payment = "payment";
   static const String successFull = "successFull";
   static const String profile = "profile";
+  static const String favorite = "favorite";
+  static const String faqs = "faqs";
+  static const String settings = "settings";
 }

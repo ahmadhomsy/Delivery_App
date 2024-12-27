@@ -10,6 +10,7 @@ import '../../widget/auth/custom_footer_auth.dart';
 import '../../widget/auth/custom_header.dart';
 import '../../widget/auth/custom_password_text_form.dart';
 import '../../widget/auth/custom_text_form.dart';
+import '../../widget/auth/custom_text_form_number.dart';
 import '../../widget/custom_address_text.dart';
 import '../../widget/custom_button.dart';
 
@@ -36,7 +37,7 @@ class SignUp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomAddressText(
-                    address: "10".tr(),
+                    address: "10",
                   ),
                   SizedBox(height: 8.h),
                   CustomTextForm(
@@ -44,7 +45,7 @@ class SignUp extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   CustomAddressText(
-                    address: "12".tr(),
+                    address: "12",
                   ),
                   SizedBox(height: 8.h),
                   CustomTextForm(
@@ -52,15 +53,15 @@ class SignUp extends StatelessWidget {
                   ),
                   SizedBox(height: 16.h),
                   CustomAddressText(
-                    address: "3".tr(),
+                    address: "3",
                   ),
                   SizedBox(height: 8.h),
-                  CustomTextForm(
+                  CustomTextFormNumber(
                     hintText: "4".tr(),
                   ),
                   SizedBox(height: 16.h),
                   CustomAddressText(
-                    address: "5".tr(),
+                    address: "5",
                   ),
                   SizedBox(height: 8.h),
                   CustomPasswordTextForm(
@@ -68,7 +69,7 @@ class SignUp extends StatelessWidget {
                   ),
                   SizedBox(height: 16.h),
                   CustomAddressText(
-                    address: "14".tr(),
+                    address: "14",
                   ),
                   SizedBox(height: 8.h),
                   CustomPasswordTextForm(

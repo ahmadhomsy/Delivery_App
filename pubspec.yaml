@@ -43,6 +43,8 @@ dependencies:
   flutter_bloc: ^8.1.6
   bloc: ^8.1.4
   flutter_screenutil: ^5.9.3
+  awesome_dialog: ^3.0.1
+  geocoding: ^3.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
